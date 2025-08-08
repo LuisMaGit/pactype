@@ -21,7 +21,7 @@ data class GameMapState(
                 map = persistentMapOf(),
                 mapType = -1,
                 totalChars = -1,
-                showDebugGrid = true,
+                showDebugGrid = false,
                 levelName = ""
             )
         }

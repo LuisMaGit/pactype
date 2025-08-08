@@ -6,5 +6,5 @@ actual fun getAppVersion(): String {
     val packageManager = application.packageManager
     val packageName = application.packageName
     val packageInfo = packageManager.getPackageInfo(packageName, 0)
-    return packageInfo.versionName
+    return packageInfo?.versionName ?: ""
 }

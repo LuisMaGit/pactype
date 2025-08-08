@@ -34,6 +34,7 @@ import com.luisma.pactype.views.levels.states.LevelsLogoState
 import com.luisma.pactype.views.levels.states.LevelsState
 import com.luisma.pactype.views.levels.states.LevelsStatusState
 import kotlinx.coroutines.launch
+import kotlin.math.sign
 
 
 @Composable
@@ -76,6 +77,12 @@ fun Levels(
         val measurements = CommonMeasurements.fromScreenSize(breakPoints)
         val scrollableContentH = (LEVEL_CARD_H * 2) + (LEVEL_CARD_SPACE_BETWEEN * 2) + LEVEL_NAME_H
         val scrollableContentVerticalPadding = (screenH - scrollableContentH) / 2
+        val trueScrollableContentVerticalPadding =
+            if (scrollableContentVerticalPadding.value.sign == -1f) {
+                0.dp
+            } else {
+                scrollableContentVerticalPadding
+            }
 
         Box(
             modifier = modifier
@@ -102,7 +109,7 @@ fun Levels(
 
                 HorizontalPager(
                     modifier = Modifier
-                        .padding(vertical = scrollableContentVerticalPadding)
+                        .padding(vertical = trueScrollableContentVerticalPadding)
                         .width(LEVEL_CARD_W + 32.dp),
                     state = pagerState,
                 ) {
@@ -131,7 +138,7 @@ fun Levels(
             LevelArrows(
                 modifier = Modifier
                     .padding(
-                        top = scrollableContentVerticalPadding + LEVEL_CARD_H +
+                        top = trueScrollableContentVerticalPadding + LEVEL_CARD_H +
                                 LEVEL_CARD_SPACE_BETWEEN / 2 - LEVEL_ARROW_H / 2
                     )
                     .width(measurements.gameW.dp),
@@ -152,7 +159,7 @@ fun Levels(
 
             LevelNumbIndicator(
                 modifier = Modifier.padding(
-                    top = scrollableContentVerticalPadding + scrollableContentH
+                    top = trueScrollableContentVerticalPadding + scrollableContentH
                 ),
                 level = currentLevel.levelId,
                 total = levelsState.total,
