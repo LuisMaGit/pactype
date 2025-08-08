@@ -1,0 +1,15 @@
+insertSettings:
+INSERT INTO user_settings (first_time, show_keyboard)
+VALUES (:first_time, :show_keyboard);
+
+updateLastPlayedId:
+UPDATE user_settings
+SET last_played_level_id = :last_played_level_id;
+
+updateShowKeyboard:
+UPDATE user_settings
+SET show_keyboard = :show_keyboard;
+
+selectSettings:
+SELECT s.first_time, s.show_keyboard, s.last_played_level_id
+FROM user_settings s;

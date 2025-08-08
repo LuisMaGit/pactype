@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Pactype</string>
+
+    <string name="normal_mode">normal mode</string>
+    <string name="practice_mode">practice mode</string>
+    <string name="time">time</string>
+    <string name="new_best">new best</string>
+    <string name="best_time">best time:</string>
+
+    <string name="game_press_any_key">press any key to start</string>
+    <string name="game_dialog_level_complete">level complete!</string>
+    <string name="game_keyboard_dont_fit">sorry, the virtual keyboard does not fit :(</string>
+
+    <string name="level_go_to_latest">go to currently playing</string>
+
+    <string name="settings_title">settings</string>
+    <string name="settings_virtual_keyboard">virtual keyboard</string>
+    <string name="settings_on">on</string>
+    <string name="settings_off">off</string>
+    <string name="settings_how_play">how to play</string>
+
+    <string name="tutorial_how_to_play">how to play</string>
+    <string name="tutorial_instruction">type the map letters to move</string>
+    <string name="tutorial_normal_collect">collect all letters before the enemy catches you</string>
+    <string name="tutorial_practice_collect">collect all letters</string>
+    <string name="tutorial_practice_no_enemies">no enemies</string>
+
+</resources>

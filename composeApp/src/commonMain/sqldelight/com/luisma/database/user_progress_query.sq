@@ -1,0 +1,20 @@
+selectLevelProgress:
+SELECT p.level_id, p.play_mode_best_time_cs, p.play_mode_progress, p.practice_mode_best_time_cs
+FROM user_progress p
+WHERE p.level_id = :level_id;
+
+insertProgress:
+INSERT INTO user_progress (level_id, practice_mode_best_time_cs, play_mode_progress, play_mode_best_time_cs)
+VALUES (:level_id, :practice_mode_best_time_cs, :play_mode_progress, :play_mode_best_time_cs);
+
+
+updateProgress:
+UPDATE user_progress
+SET play_mode_best_time_cs = :play_mode_best_time_cs,
+    play_mode_progress = :play_mode_progress,
+    practice_mode_best_time_cs = :practice_mode_best_time_cs
+WHERE level_id = :level_id;
+
+selectAllProgress:
+SELECT *
+FROM user_progress;

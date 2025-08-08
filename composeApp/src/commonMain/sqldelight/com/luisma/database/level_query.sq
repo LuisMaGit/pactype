@@ -1,0 +1,20 @@
+
+selectLevel:
+SELECT l.level_id, l.name,
+       l.char_map_id, char.char_map_type, char.char_map,
+       colors.color_main, colors.color_background, colors.color_text_on, colors.color_text_off, colors.color_key
+FROM level l, level_char_map char, level_colors colors
+WHERE l.level_id = :id AND colors.level_id = :id AND char.char_map_id = l.char_map_id;
+
+selectLevelEnemies:
+SELECT e.level_id, e.enemy_id, e.delay_sec, e.velocity_ms
+FROM level l, level_enemies e
+WHERE l.level_id = :id AND e.level_id = :id;
+
+selectAllLevelsBasics:
+SELECT l.level_id, l.name
+FROM level l;
+
+selectAllLevelColors:
+SELECT c.level_id, c.color_main, c.color_background, c.color_text_on, c.color_text_off, c.color_key
+FROM level_colors c;

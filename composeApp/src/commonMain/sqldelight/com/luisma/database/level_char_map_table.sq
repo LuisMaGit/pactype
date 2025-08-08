@@ -1,0 +1,79 @@
+CREATE TABLE level_char_map  (
+  char_map_id INTEGER PRIMARY KEY,
+  char_map_type INTEGER NOT NULL,
+  char_map TEXT NOT NULL
+);
+
+INSERT INTO level_char_map
+VALUES (
+1,
+1,
+'**********************************
+*jump␣on␣red␣van**the␣quick␣brows*
+*␣*****a*******f**e*******y*****a*
+*f*****␣*******a**h*******e*****h*
+*i*****w*******r**t*******s*****o*
+*xa␣gentle␣planet␣swept␣launch␣it*
+*␣*****q**a************i**c*****␣*
+*u*****u**n************t**a*****i*
+*pwildei**dalong**rivers**section*
+*␣*****c*******o**o*******t*****␣*
+*j*****k*******l**e*******i*****m*
+*e*****l**fresh␣earth␣an**n*****a*
+*t*****y**c*****=******w**g*****x*
+*␣*****␣**a*****=******o**␣*****␣*
+*agentblast****====****lamlightij*
+*n*****v**r************f**o*****e*
+*d*****e**y************␣**n*****t*
+*␣*****r**ialong␣the␣wap**g*****␣*
+*g*****s**g************o**␣*****c*
+*l*****␣**␣************d**s*****l*
+*ora␣wonderful␣s**sed␣ut␣perspi␣u*
+*w*****t*******u**a*******g*****b*
+*␣*****e*******p**d*******o*****␣*
+*dogs**nthe␣sun␣rays␣began␣**cats*
+****o**s**n************o**b**e****
+****x**e**d************d**a**p****
+*faintly**waters**ascent**invitec*
+*o*************o**m*************a*
+*x*************n**p*************l*
+*turned␣cold␣as␣birds␣flew␣past␣m*
+**********************************'
+);
+
+INSERT INTO level_char_map
+VALUES (
+2,
+2,
+'**********************************
+*forest␣**i␣love␣piczas␣**journey*
+*␣*****x**t************b**␣*****a*
+*d*****r**x************a**t*****r*
+*cats␣and␣bogs␣are␣best␣friends␣e*
+*␣***b**s******l**a******b**␣***s*
+*s***a**a******␣**r******␣**a***␣*
+*a***r**␣******a**e******a**r***o*
+*world**computer**mountain**beach*
+*s***e*****␣**********b*****␣***s*
+*a***o*****a**********a*****o***t*
+*n***birds␣fly␣high␣in␣the␣sk***a*
+*d***k*****r****=*****l*****v***y*
+*w***i*****y****=*****i*****a*** *
+*i***n**love***====***home**c***c*
+*␣***a**u**␣**********e**a**e***a*
+*a***␣**x**w**********x**x**␣***l*
+*children**informationm**ountains*
+*g***b*********g**␣*********x***m*
+*r***a*********a**x*********a***a*
+*o***hops␣exist␣**sunsy␣help␣***k*
+*w***r******␣********␣******r***e*
+*␣***␣******r********x******y***y*
+*friendship␣makes␣life␣more␣fun␣s*
+*a*****l*******␣**a*******s*****t*
+*s*****i*******t**y*******m*****i*
+*t*****g**flower**travel**i*****m*
+*␣*****h**a************a**l*****e*
+*x*****t**x************x**e*****s*
+*nature␣is␣beautiful␣and␣calming␣*
+**********************************'
+);

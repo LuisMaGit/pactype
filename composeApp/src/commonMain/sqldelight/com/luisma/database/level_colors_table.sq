@@ -1,0 +1,39 @@
+CREATE TABLE level_colors (
+    level_id INTEGER NOT NULL,
+	color_main TEXT NOT NULL,
+	color_background TEXT NOT NULL,
+	color_text_on TEXT NOT NULL,
+	color_text_off TEXT NOT NULL,
+	color_key TEXT NOT NULL
+);
+
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+1,
+'E2B714',
+"323437",
+"D1D0C5",
+"636669",
+"2B2E31"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+2,
+'F0E803',
+"0D1C1C",
+"FFFFFF",
+"FF6600",
+"9C9091"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+3,
+'88DBDF',
+"06737A",
+"FFFFFF",
+"F3E03B",
+"26858B"
+);

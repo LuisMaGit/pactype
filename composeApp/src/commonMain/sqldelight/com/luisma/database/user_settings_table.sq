@@ -1,0 +1,6 @@
+CREATE TABLE user_settings (
+    first_time INTEGER NOT NULL,
+    show_keyboard INTEGER NOT NULL,
+    last_played_level_id INTEGER
+);
+

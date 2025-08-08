@@ -1,0 +1,6 @@
+CREATE TABLE user_progress (
+    level_id INTEGER NOT NULL,
+    practice_mode_best_time_cs INTEGER,
+    play_mode_progress INTEGER,
+    play_mode_best_time_cs INTEGER
+);

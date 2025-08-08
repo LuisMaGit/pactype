@@ -1,0 +1,9 @@
+CREATE TABLE level(
+	level_id INTEGER PRIMARY KEY,
+	name TEXT NOT NULL,
+	char_map_id INTEGER NOT NULL
+);
+
+INSERT INTO level (level_id, name, char_map_id) VALUES (1, 'level 1', 1);
+INSERT INTO level (level_id, name, char_map_id) VALUES (2, 'level 2', 2);
+INSERT INTO level (level_id, name, char_map_id) VALUES (3, 'level 3', 1);

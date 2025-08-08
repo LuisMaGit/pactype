@@ -1,0 +1,39 @@
+CREATE TABLE level_enemies (
+ level_id INTEGER NOT NULL,
+ enemy_id INTEGER NOT NULL,
+ delay_sec INTEGER NOT NULL,
+ velocity_ms INTEGER NOT NULL
+);
+
+-- Velocity reference:
+-- average -> 3 chars/sec = 1 tile/333ms
+-- advanced -> 5 chars/sec = 1 tile/200ms
+
+-- Enemies reference:
+-- 0- Blue, vel: slowest. target tile: player.
+-- 1- Green, vel: medium. target tile: [GREEN_TARGET_TILES_AHEAD_AMOUNT] tiles in front of player (prioritize travel direction).
+-- 2- Red, vel: fast. target tile: [RED_TARGET_TILES_AHEAD_AMOUNT] tiles in front of player (prioritize travel direction).
+-- 3- Yellow, vel: faster. target tile: distance from hero is more than [YELLOW_TARGET_SWITCH_TARGET_TILES_AMOUNT] tiles -> player, less -> left corner.
+
+-- +----------+----------+-----------+-------------+
+-- | level_id | enemy_id | delay_sec | velocity_ms |
+-- +----------+----------+-----------+-------------+
+-- |        1 |        0 |         0 |         700 |
+-- |        1 |        1 |         5 |         500 |
+-- +----------+----------+-----------+-------------+
+-- |        2 |        0 |         0 |         700 |
+-- |        2 |        1 |         5 |         500 |
+-- +----------+----------+-----------+-------------+
+-- |        2 |        0 |         0 |         700 |
+-- |        2 |        1 |         5 |         500 |
+-- +----------+----------+-----------+-------------+
+
+INSERT INTO level_enemies (level_id, enemy_id, delay_sec, velocity_ms) VALUES
+(1, 0, 0, 700),
+(1, 1, 5, 500),
+
+(2, 0, 0, 700),
+(2, 1, 5, 500),
+
+(3, 0, 0, 700),
+(3, 1, 5, 500);
