@@ -1,9 +1,22 @@
 CREATE TABLE level(
 	level_id INTEGER PRIMARY KEY,
 	name TEXT NOT NULL,
-	char_map_id INTEGER NOT NULL
+	char_map_id INTEGER NOT NULL,
+	difficulty INTEGER NOT NULL
 );
 
-INSERT INTO level (level_id, name, char_map_id) VALUES (1, 'level 1', 1);
-INSERT INTO level (level_id, name, char_map_id) VALUES (2, 'level 2', 2);
-INSERT INTO level (level_id, name, char_map_id) VALUES (3, 'level 3', 1);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (1, 'serika', 1, 1);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (2, 'red dragon', 2, 1);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (3, 'retrocast', 3, 1);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (4, 'comfy', 4, 1);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (5, 'magic girl', 5, 1);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (6, 'monokai', 6, 2);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (7, 'matrix', 7, 2);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (8, 'husqy', 8, 2);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (9, 'osaka', 9,2);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (10, 'vasper', 10,2);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (11, 'ryu', 11, 3);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (12, 'miami night', 12, 3);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (13, 'joker', 13, 3);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (14, 'onedark', 14, 3);
+INSERT INTO level (level_id, name, char_map_id, difficulty) VALUES (15, 'blue dolphin', 15, 3);

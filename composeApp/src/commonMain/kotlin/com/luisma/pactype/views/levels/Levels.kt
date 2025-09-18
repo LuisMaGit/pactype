@@ -24,9 +24,11 @@ import com.luisma.pactype.views.levels.components.LEVEL_CARD_SPACE_BETWEEN
 import com.luisma.pactype.views.levels.components.LEVEL_CARD_W
 import com.luisma.pactype.views.levels.components.LEVEL_CARET_W
 import com.luisma.pactype.views.levels.components.LEVEL_NAME_H
+import com.luisma.pactype.views.levels.components.LEVEL_NUMB_INDICATOR_H
 import com.luisma.pactype.views.levels.components.LevelAppbar
 import com.luisma.pactype.views.levels.components.LevelArrows
 import com.luisma.pactype.views.levels.components.LevelBottomBanner
+import com.luisma.pactype.views.levels.components.LevelKeysLegend
 import com.luisma.pactype.views.levels.components.LevelNumbIndicator
 import com.luisma.pactype.views.levels.components.LevelScrollableContent
 import com.luisma.pactype.views.levels.components.Logo
@@ -83,6 +85,7 @@ fun Levels(
             } else {
                 scrollableContentVerticalPadding
             }
+        val heightUntilNumbIndicator = trueScrollableContentVerticalPadding + scrollableContentH
 
         Box(
             modifier = modifier
@@ -159,12 +162,20 @@ fun Levels(
 
             LevelNumbIndicator(
                 modifier = Modifier.padding(
-                    top = trueScrollableContentVerticalPadding + scrollableContentH
+                    top = heightUntilNumbIndicator
                 ),
                 level = currentLevel.levelId,
                 total = levelsState.total,
                 levelTheme = levelTheme
             )
+
+            LevelKeysLegend(
+                modifier = Modifier.padding(
+                    top = heightUntilNumbIndicator + LEVEL_NUMB_INDICATOR_H
+                ),
+                levelTheme = levelTheme
+            )
+
 
             if (statusState.showLastPlayedBanner)
                 LevelBottomBanner(

@@ -2,6 +2,7 @@ package com.luisma.pactype.views.levels.states
 
 import androidx.compose.runtime.Immutable
 import com.luisma.pactype.ui.theme.LevelTheme
+import com.luisma.pactype.views.levels.data.LevelsDifficulty
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 
@@ -31,6 +32,7 @@ data class LevelsState(
 data class LevelState(
     val levelId: Int,
     val levelName: String,
+    val levelDifficulty: LevelsDifficulty,
     val levelTheme: LevelTheme,
     val playModeBestTimeCS: Int,
     val playModeProgress: Int,
@@ -44,6 +46,7 @@ data class LevelState(
                 playModeProgress = 0,
                 playModeBestTimeCS = 0,
                 practiceModeBestTimeCS = 0,
+                levelDifficulty = LevelsDifficulty.Easy,
                 levelTheme = LevelTheme.initial()
             )
         }

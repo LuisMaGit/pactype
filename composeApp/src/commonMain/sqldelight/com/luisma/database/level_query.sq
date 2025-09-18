@@ -1,6 +1,6 @@
 
 selectLevel:
-SELECT l.level_id, l.name,
+SELECT l.level_id, l.name, l.difficulty,
        l.char_map_id, char.char_map_type, char.char_map,
        colors.color_main, colors.color_background, colors.color_text_on, colors.color_text_off, colors.color_key
 FROM level l, level_char_map char, level_colors colors
@@ -12,7 +12,7 @@ FROM level l, level_enemies e
 WHERE l.level_id = :id AND e.level_id = :id;
 
 selectAllLevelsBasics:
-SELECT l.level_id, l.name
+SELECT l.level_id, l.name, l.difficulty
 FROM level l;
 
 selectAllLevelColors:

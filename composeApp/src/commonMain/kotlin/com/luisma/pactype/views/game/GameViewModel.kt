@@ -18,6 +18,7 @@ import com.luisma.pactype.views.game.data.GameContractsByMapType
 import com.luisma.pactype.views.game.data.LOST_SHAKE_ANIMATION_DURATION_MS
 import com.luisma.pactype.views.game.data.PKey
 import com.luisma.pactype.views.game.data.PKeyType
+import com.luisma.pactype.views.game.data.PLAYER_START_COORDINATE
 import com.luisma.pactype.views.game.data.gameContractsByMapType
 import com.luisma.pactype.views.game.services.EnemiesData
 import com.luisma.pactype.views.game.services.GameKeyboardChannelService
@@ -228,8 +229,8 @@ class GameViewModel(
             _playState.update {
                 it.copy(
                     player = PlayerState(
-                        coordinates = contractsFromMap.playStartCoordinate,
-                        prevCoordinate = contractsFromMap.playStartCoordinate
+                        coordinates = PLAYER_START_COORDINATE,
+                        prevCoordinate = PLAYER_START_COORDINATE
                     )
                 )
             }

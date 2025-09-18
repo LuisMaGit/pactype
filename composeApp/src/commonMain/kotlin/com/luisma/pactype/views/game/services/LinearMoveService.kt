@@ -51,7 +51,8 @@ class LinearMoveService {
         map: PMap
     ): List<Cell> {
         val candidates = getPossibleCellsToMove(
-            coordinate = coordinate, map = map
+            coordinate = coordinate,
+            map = map
         ).toMutableList()
 
         val previousIdx = candidates.indexOfFirst { candidate ->
@@ -105,7 +106,8 @@ class LinearMoveService {
         val distances = mutableListOf<Int>()
         candidates.forEach { candidate ->
             val distance = calculateDistance(
-                point1 = Coordinate(candidate.x, candidate.y), point2 = targetCoordinate
+                point1 = Coordinate(candidate.x, candidate.y),
+                point2 = targetCoordinate
             )
             distances.add(distance)
         }

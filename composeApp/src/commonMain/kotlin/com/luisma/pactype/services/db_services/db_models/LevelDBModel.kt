@@ -5,5 +5,6 @@ data class LevelDBModel(
      val name: String,
      val mapType: Int,
      val charMap: String,
+     val difficulty: Int,
      val levelDBColors: LevelDBColors
 )

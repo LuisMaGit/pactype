@@ -22,6 +22,7 @@ class LevelsDBService {
             name = levels.name,
             charMap = levels.char_map,
             mapType = levels.char_map_type.toInt(),
+            difficulty = levels.difficulty.toInt(),
             levelDBColors = LevelDBColors(
                 main = levels.color_main,
                 background = levels.color_background,
@@ -43,6 +44,7 @@ class LevelsDBService {
                 name = level.name,
                 charMap = "",
                 mapType = -1,
+                difficulty = level.difficulty.toInt(),
                 levelDBColors = LevelDBColors(
                     main = color.color_main,
                     background = color.color_background,

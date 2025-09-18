@@ -8,6 +8,8 @@ import pactype.composeapp.generated.resources.Res
 import pactype.composeapp.generated.resources.RobotoMono_Bold
 import pactype.composeapp.generated.resources.RobotoMono_Regular
 
+const val P_FONT_SIZE_8 = 8
+
 const val P_FONT_SIZE_12 = 12
 const val P_FONT_SIZE_16 = 16
 const val P_FONT_SIZE_20 = 20

@@ -6,12 +6,21 @@
     <string name="time">time</string>
     <string name="new_best">new best</string>
     <string name="best_time">best time:</string>
+    <string name="easy">easy</string>
+    <string name="mid">mid</string>
+    <string name="hard">hard</string>
 
     <string name="game_press_any_key">press any key to start</string>
     <string name="game_dialog_level_complete">level complete!</string>
     <string name="game_keyboard_dont_fit">sorry, the virtual keyboard does not fit :(</string>
 
     <string name="level_go_to_latest">go to currently playing</string>
+    <string name="level_go_left">previous level</string>
+    <string name="level_go_right">next level</string>
+    <string name="level_play_normal">play normal mode</string>
+    <string name="level_play_practice">play practice mode</string>
+    <string name="level_settings">game settings</string>
+    <string name="level_currently_playing">go currently playing</string>
 
     <string name="settings_title">settings</string>
     <string name="settings_virtual_keyboard">virtual keyboard</string>

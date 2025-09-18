@@ -11,11 +11,11 @@ CREATE TABLE level_colors (
 INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
 VALUES (
 1,
-'E2B714',
-"323437",
-"D1D0C5",
-"636669",
-"2B2E31"
+'E2B714', --main-color
+"323437", --bg-color
+"D1D0C5", --text-color
+"646669", --sub-color
+"2C2E31" --sub-alt-color
 );
 
 INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
@@ -36,4 +36,126 @@ VALUES (
 "FFFFFF",
 "F3E03B",
 "26858B"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+4,
+'F8CDC6',
+"4A5B6E",
+"F5EFEE",
+"9EC1CC",
+"425366"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+5,
+'F5B1CC',
+"091F2C",
+"A288D9",
+"93E8E3",
+"2C2E31"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+6,
+'A6E22E',
+"272822",
+"E2E2DC",
+"E6DB74",
+"1F201B"
+);
+
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+7,
+'15FF00',
+"000000",
+"D1FFCD",
+"006500",
+"032000"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+8,
+'C58AFF',
+"000000",
+"EBD7FF",
+"972FFF",
+"1E001E"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+9,
+'859900',
+"00141A",
+"EEE8D5",
+"2AA198",
+"00222B"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+10,
+"FFC799",
+"101010",
+"FFFFFF",
+"A0A0A0",
+"1C1C1C"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+11,
+'F17754',
+"081426",
+"FFE4BC",
+"F17754",
+"040E1D"
+);
+
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+12,
+'E4609B',
+"18181A",
+"FFFFFF",
+"47BAC0",
+"0F0F10"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+13,
+'99DE1E',
+"1A0E25",
+"E9E2F5",
+"7554A3",
+"14081F"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+14,
+'61AFEF',
+"2F343F",
+"98C379",
+"ECEFF4",
+"262B34"
+);
+
+INSERT INTO level_colors (level_id, color_main, color_background, color_text_on, color_text_off, color_key)
+VALUES (
+15,
+'FFCEFB',
+"003950",
+"FFCEFB",
+"00E4FF",
+"014961"
 );

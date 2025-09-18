@@ -22,13 +22,19 @@ import com.luisma.pactype.ui.components.Timer
 import com.luisma.pactype.ui.theme.LevelThemeCompose
 import com.luisma.pactype.ui.theme.P_FONT_SIZE_12
 import com.luisma.pactype.ui.theme.P_FONT_SIZE_20
+import com.luisma.pactype.ui.theme.P_FONT_SIZE_8
 import com.luisma.pactype.ui.utils.fontSizeNonScaledSp
+import com.luisma.pactype.views.levels.data.LevelsDifficulty
+import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import pactype.composeapp.generated.resources.Res
 import pactype.composeapp.generated.resources.best_time
+import pactype.composeapp.generated.resources.easy
+import pactype.composeapp.generated.resources.hard
 import pactype.composeapp.generated.resources.ic_flag
 import pactype.composeapp.generated.resources.ic_play_controller
+import pactype.composeapp.generated.resources.mid
 import pactype.composeapp.generated.resources.normal_mode
 import pactype.composeapp.generated.resources.practice_mode
 
@@ -42,7 +48,19 @@ fun LevelCard(
     practiceMode: Boolean,
     bestTimeCS: Int?,
     progress: Int?,
+    difficulty: LevelsDifficulty?
 ) {
+
+
+    fun wordByDifficulty(): StringResource {
+        return when (difficulty) {
+            LevelsDifficulty.Easy -> Res.string.easy
+            LevelsDifficulty.Mid -> Res.string.mid
+            LevelsDifficulty.Hard -> Res.string.hard
+            else -> Res.string.easy
+        }
+    }
+
     Box(
         modifier = modifier
             .height(LEVEL_CARD_H)
@@ -54,6 +72,14 @@ fun LevelCard(
             ),
         contentAlignment = Alignment.CenterStart
     ) {
+        if (difficulty != null) {
+            PText(
+                modifier = Modifier.align(Alignment.TopEnd).padding(all = 12.dp),
+                text = "[${stringResource(wordByDifficulty())}]",
+                fontSize = P_FONT_SIZE_8.fontSizeNonScaledSp,
+                color = theme.main
+            )
+        }
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceAround

@@ -14,7 +14,7 @@ import kotlinx.collections.immutable.ImmutableList
 
 
 const val ROBOT_NEAR_TILES_TO_CHECK_AMOUNT = 5
-const val ROBOT_MOVE_DELAY_MS = 100L
+const val ROBOT_MOVE_DELAY_MS = 333L
 const val ROBOT_RUN_FROM_ENEMY_TILES_AMOUNT = 4
 
 class RobotPlayerService(
@@ -57,6 +57,7 @@ class RobotPlayerService(
     ): RobotPlayerMoveResponse? {
 
         // get possible moves (with previous move discarded)
+        // if it is none, go back
         // if it is only one, move there
         // more than one, get target from [getNearTargetToMove] or [getFarTargetToMove]
 
@@ -65,6 +66,14 @@ class RobotPlayerService(
             coordinateToDiscard = playerPreviousCoordinate,
             map = map
         ).toMutableList()
+
+        if (candidates.isEmpty()) {
+            return RobotPlayerMoveResponse(
+                targetCoordinate = playerPreviousCoordinate,
+                coordinates = playerPreviousCoordinate,
+                previousCoordinates = playerCoordinate,
+            )
+        }
 
         var cellToMove: Cell? = null
         var targetCoordinate: Coordinate?
@@ -99,6 +108,7 @@ class RobotPlayerService(
                 previousCoordinates = playerCoordinate,
             )
         }
+
         return null
     }
 

@@ -45,6 +45,7 @@ fun LevelScrollableContent(
             practiceMode = false,
             bestTimeCS = level.playModeBestTimeCS,
             progress = level.playModeProgress,
+            difficulty = level.levelDifficulty,
         )
         LevelCard(
             modifier = Modifier
@@ -55,7 +56,8 @@ fun LevelScrollableContent(
             theme = levelTheme,
             practiceMode = true,
             bestTimeCS = level.practiceModeBestTimeCS,
-            progress = null
+            progress = null,
+            difficulty = null
         )
         PText(
             modifier = Modifier

@@ -7,6 +7,7 @@ import com.luisma.pactype.services.db_services.SettingsDBService
 import com.luisma.pactype.services.db_services.UserProgressDBService
 import com.luisma.pactype.services.db_services.db_models.SettingsDBModel
 import com.luisma.pactype.ui.theme.LevelTheme
+import com.luisma.pactype.views.levels.data.LevelsDifficulty
 import com.luisma.pactype.views.levels.states.LevelState
 import com.luisma.pactype.views.levels.states.LevelsState
 import kotlinx.collections.immutable.toImmutableList
@@ -52,6 +53,7 @@ class LevelsService(
                         playModeProgress = progressExists?.playModeProgress ?: 0,
                         practiceModeBestTimeCS = progressExists?.practiceModeBestTimeCS ?: 0,
                         playModeBestTimeCS = progressExists?.playModeBestTimeCS ?: 0,
+                        levelDifficulty = LevelsDifficulty.fromDB(level.difficulty),
                         levelTheme = LevelTheme(
                             main = level.levelDBColors.main,
                             background = level.levelDBColors.background,
