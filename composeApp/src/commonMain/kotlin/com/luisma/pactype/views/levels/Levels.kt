@@ -75,6 +75,7 @@ fun Levels(
         )
     }
 
+
     ScreenSizeUtil { breakPoints, _, screenH ->
         val measurements = CommonMeasurements.fromScreenSize(breakPoints)
         val scrollableContentH = (LEVEL_CARD_H * 2) + (LEVEL_CARD_SPACE_BETWEEN * 2) + LEVEL_NAME_H
@@ -86,7 +87,7 @@ fun Levels(
                 scrollableContentVerticalPadding
             }
         val heightUntilNumbIndicator = trueScrollableContentVerticalPadding + scrollableContentH
-
+        val allContentFit = screenH >= 580.dp
         Box(
             modifier = modifier
                 .background(color = levelTheme.background)
@@ -97,18 +98,20 @@ fun Levels(
                 modifier = Modifier.width(measurements.gameW.dp),
                 contentAlignment = Alignment.TopCenter
             ) {
-                LevelAppbar(
-                    levelTheme = levelTheme,
-                    onTapSettings = { sendEvent(LevelsEvents.ToggleSettingsDialog) }
-                )
+                if (allContentFit)
+                    LevelAppbar(
+                        levelTheme = levelTheme,
+                        onTapSettings = { sendEvent(LevelsEvents.ToggleSettingsDialog) }
+                    )
 
-                Logo(
-                    modifier = Modifier
-                        .padding(top = APPBAR_H)
-                        .width((logoState.charWidth * (logoState.chars.size + 1) + LEVEL_CARET_W + 2).dp),
-                    levelTheme = levelTheme,
-                    logoState = logoState
-                )
+                if (allContentFit)
+                    Logo(
+                        modifier = Modifier
+                            .padding(top = APPBAR_H)
+                            .width((logoState.charWidth * (logoState.chars.size + 1) + LEVEL_CARET_W + 2).dp),
+                        levelTheme = levelTheme,
+                        logoState = logoState
+                    )
 
                 HorizontalPager(
                     modifier = Modifier
@@ -160,24 +163,25 @@ fun Levels(
                 }
             )
 
-            LevelNumbIndicator(
-                modifier = Modifier.padding(
-                    top = heightUntilNumbIndicator
-                ),
-                level = currentLevel.levelId,
-                total = levelsState.total,
-                levelTheme = levelTheme
-            )
+            if (allContentFit)
+                LevelNumbIndicator(
+                    modifier = Modifier.padding(
+                        top = heightUntilNumbIndicator
+                    ),
+                    level = currentLevel.levelId,
+                    total = levelsState.total,
+                    levelTheme = levelTheme
+                )
+            if (allContentFit)
+                LevelKeysLegend(
+                    modifier = Modifier.padding(
+                        top = heightUntilNumbIndicator + LEVEL_NUMB_INDICATOR_H
+                    ),
+                    levelTheme = levelTheme
+                )
 
-            LevelKeysLegend(
-                modifier = Modifier.padding(
-                    top = heightUntilNumbIndicator + LEVEL_NUMB_INDICATOR_H
-                ),
-                levelTheme = levelTheme
-            )
 
-
-            if (statusState.showLastPlayedBanner)
+            if (allContentFit && statusState.showLastPlayedBanner)
                 LevelBottomBanner(
                     modifier = Modifier
                         .align(alignment = Alignment.BottomEnd)

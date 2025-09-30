@@ -106,6 +106,9 @@ compose.desktop {
             packageName = "com.luisma.pactype"
             packageVersion = "1.0.0"
             modules("java.sql")
+            macOS {
+                iconFile.set(project.file("../MacOsIcons.icns"))
+            }
         }
     }
 }

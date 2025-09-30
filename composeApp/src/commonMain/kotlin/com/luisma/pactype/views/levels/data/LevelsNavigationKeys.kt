@@ -1,8 +1,8 @@
 package com.luisma.pactype.views.levels.data
 
 enum class LevelsNavigationKeys(val char: Char) {
-    PREVIOUS('%'),
-    NEXT('\''),
+    PREVIOUS('F'),
+    NEXT('J'),
     NORMAL_MODE('N'),
     PRACTICE_MODE('P'),
     SETTINGS('S'),

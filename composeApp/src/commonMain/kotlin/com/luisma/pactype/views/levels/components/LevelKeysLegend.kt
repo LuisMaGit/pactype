@@ -38,12 +38,12 @@ fun LevelKeysLegend(
         modifier = modifier.padding(top = 16.dp)
     ) {
         LevelKeyLegend(
-            char = '←',
+            char = 'f',
             text = stringResource(Res.string.level_go_left),
             levelTheme = levelTheme
         )
         LevelKeyLegend(
-            char = '→',
+            char = 'j',
             text = stringResource(Res.string.level_go_right),
             levelTheme = levelTheme
         )

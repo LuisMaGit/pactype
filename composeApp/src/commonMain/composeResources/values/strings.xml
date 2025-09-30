@@ -19,8 +19,8 @@
     <string name="level_go_right">next level</string>
     <string name="level_play_normal">play normal mode</string>
     <string name="level_play_practice">play practice mode</string>
-    <string name="level_settings">game settings</string>
-    <string name="level_currently_playing">go currently playing</string>
+    <string name="level_settings">settings</string>
+    <string name="level_currently_playing">go to currently playing</string>
 
     <string name="settings_title">settings</string>
     <string name="settings_virtual_keyboard">virtual keyboard</string>
