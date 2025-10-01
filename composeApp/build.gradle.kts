@@ -103,7 +103,7 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.luisma.pactype"
+            packageName = "Pactype"
             packageVersion = "1.0.0"
             modules("java.sql")
             macOS {
