@@ -18,7 +18,7 @@ data class GamePlayState(
                 player = PlayerState.initial(),
                 enemies = persistentListOf(),
                 showEnemyTargetCell = false,
-                playWithRobot = false,
+                playWithRobot = true,
             )
         }
     }
