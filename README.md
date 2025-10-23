@@ -1,14 +1,29 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop.
+<p align="center">  
+  <img width="100" height = "100" alt="image" src=https://github.com/user-attachments/assets/43435dbd-d8a0-4a76-87df-7ec3ff120c89/>
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+  <h2 align="center">Pactype</h2>
+</p>
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+<h4 align="center">A PacMan style game, developed without a game engine, built entirely in Kotlin using Compose Multiplatform for Android, iOS, and Desktop, with a small twist, players move by typing commands instead of using arrow keys.</h4>
+
+<p align="center">
 
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+<a align= "center" href = "https://play.google.com/store/apps/details?id=com.luisma.pactype">
+ <image width="200" height="60" src="https://github.com/user-attachments/assets/68693f96-9af7-434c-a4d7-86439afafb0e"></image>
+</a>
+
+<a align= "center" href = "https://github.com/LuisMaGit/pactype/raw/refs/heads/main/mac_arm/Pactype-1.0.0.dmg">
+<image width="200" height="60" src="https://github.com/user-attachments/assets/04900d03-1e22-4541-beef-7f258a7079ee"></image>
+</a>
+
+<p>
+
+
+
+
+
+
+
+
+
