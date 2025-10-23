@@ -4,7 +4,7 @@
   <h2 align="center">Pactype</h2>
 </p>
 
-<h4 align="center">A PacMan style game, developed without a game engine, built entirely in Kotlin using Compose Multiplatform for Android, iOS, and Desktop, with a small twist, players move by typing commands instead of using arrow keys.</h4>
+<h4 align="center">A PacMan style game, with a small twist, players move by typing commands instead of using arrow keys. Developed without a game engine, built entirely in Kotlin using Compose Multiplatform for Android, iOS, and Desktop.</h4>
 
 <p align="center">
 <a align= "center" href = "https://play.google.com/store/apps/details?id=com.luisma.pactype">
