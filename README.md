@@ -4,7 +4,7 @@
   <h2 align="center">Pactype</h2>
 </p>
 
-<h4 align="center">A PacMan style game, with a small twist, players move by typing commands instead of using arrow keys. Developed without a game engine, built entirely in Kotlin using Compose Multiplatform for Android, iOS, and Desktop.</h4>
+<h4 align="center">A Pacman style game with a small twist, players move by typing commands instead of using arrow keys. Developed without a game engine, built entirely in Kotlin using Compose Multiplatform for Android, iOS, and Desktop.</h4>
 
 <p align="center">
 <a align= "center" href = "https://play.google.com/store/apps/details?id=com.luisma.pactype">
@@ -26,13 +26,16 @@ https://github.com/user-attachments/assets/dae33298-4c7d-4132-bb74-987d469291f9
 </br>
 
 ### Before opening the macOS app
+
 Trust the app first by going to <code>Settings/Privacy & Security</code>
+</br>
+</br>
 <img width="701" height="272" alt="mac help" src="https://github.com/user-attachments/assets/0f6a9562-08f1-42e9-af25-69830bfe47e5" />
 
 </br>
 </br>
 
-### How was the app made??
+### How was the app made?
 
 The game is done without a game engine using Kotlin and Compose Multiplaform, with the MVVM architecture and a SQLite3 DB.
 Tested for mobile in Android and iOS, and desktop in macOS with Apple chip.
