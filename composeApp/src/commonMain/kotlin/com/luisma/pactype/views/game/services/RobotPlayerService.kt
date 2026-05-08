@@ -14,7 +14,7 @@ import kotlinx.collections.immutable.ImmutableList
 
 
 const val ROBOT_NEAR_TILES_TO_CHECK_AMOUNT = 5
-const val ROBOT_MOVE_DELAY_MS = 333L
+const val ROBOT_MOVE_DELAY_MS = 50L
 const val ROBOT_RUN_FROM_ENEMY_TILES_AMOUNT = 4
 
 class RobotPlayerService(
